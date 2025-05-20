@@ -5,8 +5,68 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:MerenyiEvVegi"
         mc:Ignorable="d"
+        Background="DarkSlateGray"
         Title="TodoWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
         
+        <!-- Lista -->
+        <ListBox Grid.Row="0" x:Name="BookListBox" Margin="10" Background="#14111f" Foreground="White" BorderThickness="0" Height="270">
+            <ListBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </ListBox.Resources>
+        </ListBox>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <!-- Task -->
+            <TextBlock Text="Add new Task:" Grid.Row="0" Grid.Column="1" Margin="10"
+                       VerticalAlignment="Center" Foreground="White"/>
+            <TextBox x:Name="TaskTextBox" Grid.Row="1" Grid.Column="0" Width="200" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            
+            <!-- Priority -->
+            <ComboBox x:Name="PrioComboBox" Grid.Row="1" Grid.Column="1" Width="200" Background="Black" Foreground="White" BorderThickness="0" Margin="10">
+                <ComboBox.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="#14111f" />
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="#14111f" />
+                </ComboBox.Resources>
+                <ComboBoxItem Content="Critical"/>
+                <ComboBoxItem Content="High"/>
+                <ComboBoxItem Content="Normal"/>
+                <ComboBoxItem Content="Low"/>
+                <ComboBoxItem Content="Lowest"/>
+            </ComboBox>
+            
+            <!-- State -->
+            <ComboBox x:Name="StateComboBox" Grid.Row="1" Grid.Column="2" Width="200" Background="Black" Foreground="White" BorderThickness="0" Margin="10">
+                <ComboBox.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="#14111f" />
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="#14111f" />
+                </ComboBox.Resources>
+                <ComboBoxItem Content="NotStarted"/>
+                <ComboBoxItem Content="InProgress"/>
+                <ComboBoxItem Content="Completed"/>
+            </ComboBox>
+        </Grid>
     </Grid>
 </Window>

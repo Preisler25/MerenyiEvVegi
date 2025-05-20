@@ -19,6 +19,9 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        UserDataSource.LoadUsers("users.txt");
+        TodoDataSource.LoadTodos("Todos.txt");
+        
     }
 
     private void RegisterButton_OnClick(object sender, RoutedEventArgs e)
