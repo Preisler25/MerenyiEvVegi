@@ -8,4 +8,11 @@ public partial class RegisterWindow : Window
     {
         InitializeComponent();
     }
+
+    private void LoginButton_OnClick(object sender, RoutedEventArgs e)
+    {
+        MainWindow main = new MainWindow();
+        main.Show();
+        this.Close();
+    }
 }

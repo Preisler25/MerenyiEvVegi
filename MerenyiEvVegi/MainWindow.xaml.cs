@@ -20,4 +20,11 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
     }
+
+    private void RegisterButton_OnClick(object sender, RoutedEventArgs e)
+    {
+        RegisterWindow registerWindow = new RegisterWindow();
+        registerWindow.Show();
+        this.Close();
+    }
 }
