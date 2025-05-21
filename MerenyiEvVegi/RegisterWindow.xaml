@@ -21,7 +21,7 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <!--Nev Input  -->
+            <!--Nev  -->
             <TextBlock Text="Név:" Grid.Row="0" Grid.Column="0" Margin="10"
 	   VerticalAlignment="Center" Foreground="White"/>
             <TextBox x:Name="NevTextBox" Grid.Row="0" Grid.Column="1" Width="200" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10">
@@ -66,7 +66,7 @@
             </TextBox>
 
             <!--Register  -->
-            <Button x:Name="RegisterButton" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="Regisztráció" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10">
+            <Button x:Name="RegisterButton" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="Regisztráció" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10" Click="RegisterButton_OnClick">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>

@@ -37,7 +37,7 @@
 
 
         <!--Login Button  -->
-        <Button x:Name="LoginButton" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="Bejelentkezés" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10">
+        <Button x:Name="LoginButton" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="Bejelentkezés" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10" Click="LoginButton_OnClick">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
